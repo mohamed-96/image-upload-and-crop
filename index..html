@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.8.1/cropper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="./logo.png" width="60">
+    </header>
+    <main class="page">
+        <h2>What is the size of my image</h2>
+        <p>To start please upload image file such as png, jpg or pdf</p>
+
+
+        <!-- upload file -->
+        <div class="box">
+            <label for="file-input"><button onclick="fileInput.click();" id="upload" class="upload">Upload Image</button></label>
+            <input type="file" id="fileInput">
+        </div>
+
+        <!-- leftbox -->
+        <div class="box-2">
+            <div class="result"></div>
+        </div>
+
+
+        <!--rightbox-->
+        <!-- result of crop -->
+        <div class="img-result hide">
+            <img class="cropped" src="" alt="">
+            <h3 id="size"></h3>
+        </div>
+
+        <!-- save btn -->
+        <div class="box">
+            <button class="btn save hide">Crop</button>
+        </div>
+
+        <div class="slidecontainer hide">
+            <label> Scale</label>
+            <input type="range" min="0.25" value="1" step="0.25" max="10" class="slider img-w" id="myRange">
+            <output id="out">100%</output>
+        </div>
+
+        <!-- download btn -->
+        <!-- <div class="box">
+            <a href="" class="btn download hide">Download</a>
+        </div> -->
+    </main>
+    <div class="footer">
+        created for you by <span>&nbsp;  retun to sender io</span>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
